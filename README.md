@@ -2,7 +2,7 @@
 
 ## Installation  instructions
 ```javascript
-Please clone the repo git clone http://github.com/shaikhalamin/
+Please clone the repo git clone https://github.com/shaikhalamin/ecommerce_crud_fe.git
 ```
 
 ```javascript
