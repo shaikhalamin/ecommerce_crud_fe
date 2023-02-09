@@ -1,25 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Login from "./components/auth/Login";
+import ProductCreate from "./components/dashboard/products/create/ProductCreate";
+import EditProduct from "./components/dashboard/products/edit/EditProduct";
+import ProductIndex from "./components/dashboard/products/Index";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/dashboard" element={<ProductIndex />} />
+      <Route path="/dashboard/products" element={<ProductIndex />} />
+      <Route path="/dashboard/products/create" element={<ProductCreate />} />
+      <Route path="/dashboard/products/edit/:id" element={<EditProduct />} />
+    </Routes>
   );
 }
 
